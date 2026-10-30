@@ -101,7 +101,7 @@ window.SHOP = {
       title: "Data Analytics for Small Business Owners",
       tagline: "Turn your numbers into decisions that grow profit.",
       description:
-        "Everything I learned in years of analysing business data and two levels of business analytics study — made simple for owners who are not 'numbers people'. Learn to read your sales, spot what's really making money, price with confidence and stop guessing.",
+        "Everything I learned from 16 years of running operations on data and my Level 7 & 8 data analytics studies — made simple for owners who are not 'numbers people'. Learn to read your sales, spot what's really making money, price with confidence and stop guessing.",
       includes: ["8 modules, beginner friendly", "Real small-business case studies", "Pricing & profit worksheets", "Sales Dashboard template included", "Certificate of completion"],
       price: 149,
       salePrice: 99,
