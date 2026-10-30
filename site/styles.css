@@ -251,7 +251,7 @@ details p { margin: 12px 0 0; color: var(--muted); }
 }
 
 /* About: CV details */
-.sub { margin: 34px 0 6px; font-size: 1.35rem; }
+.sub { margin: 28px 0 6px; font-size: 1.35rem; }
 .timeline .t-item p { margin: 4px 0 0; font-size: .93rem; }
 .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 0 0 20px; }
 .stats strong { display: block; font-family: "Fraunces", serif; font-size: 1.6rem; color: var(--teal); }
