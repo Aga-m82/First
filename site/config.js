@@ -40,7 +40,7 @@ const SHOP = {
       includes: ["Google Sheets template (copy in 1 click)", "Break-even & extra-sales calculator", "Bundle vs. discount comparison", "Short video walkthrough"],
       price: 19,
       salePrice: 12,
-      stripeLink: "",
+      stripeLink: "https://buy.stripe.com/7sYfZj67RfCt07h9L86oo00",
     },
     {
       id: "sales-dashboard",
