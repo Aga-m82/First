@@ -91,8 +91,8 @@ const SHOP = {
       description:
         "A practical 41-page ebook for small business owners, freelancers and sole traders. Learn where AI really helps, write prompts that work, and set up simple automations for emails, invoices, social posts, customer questions and data entry. No coding needed: every recipe has steps you can copy, a test and a safety check.",
       includes: ["30 ready-to-use AI prompts", "10 copy-and-use automation recipes", "Tool comparison guide (free vs. paid)", "Time-Saved Calculator (Excel / Google Sheets)", "Profit dashboard & sales audit", "Safe AI checklists and a 7-day plan"],
-      price: 79,
-      stripeLink: "https://buy.stripe.com/7sY8wRgMvfCt8DNf5s6oo04",
+      price: 39,
+      stripeLink: "", // TODO: new €39 Payment Link
     },
     {
       id: "data-course",
@@ -125,13 +125,13 @@ const SHOP = {
       title: "The Complete Business Toolkit",
       tagline: "Every template, kit and course above — one price.",
       description:
-        "Get all 7 products together and save more than half. Includes every future update to the templates and courses, plus a 30-minute one-to-one automation review call with me to choose what to set up first in your business.",
+        "Get all 7 products together, worth €398 if bought separately. Includes every future update to the templates, ebook and courses, plus a 30-minute one-to-one automation review call with me to choose what to set up first in your business.",
       includes: ["All 7 products above", "Free future updates", "30-min 1:1 automation review call", "Priority email support"],
-      price: 438,
+      price: 249,
       salePrice: 199,
       stripeLinkSale: "https://buy.stripe.com/5kQ28tgMv8a13jt0ay6oo07",
       featured: true,
-      stripeLink: "https://buy.stripe.com/00w5kFdAj4XP9HR1eC6oo08",
+      stripeLink: "", // TODO: new €249 Payment Link (used after Black Friday)
     },
   ],
 };
