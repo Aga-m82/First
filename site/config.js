@@ -2,7 +2,7 @@
 //  SHOP SETTINGS — edit this file to change products & payments
 // ============================================================
 
-window.SHOP = {
+const SHOP = {
   currency: "EUR",
   currencySymbol: "€",
 
@@ -136,3 +136,7 @@ window.SHOP = {
     },
   ],
 };
+
+// Shared by the website (browser) and the PayPal function (server)
+if (typeof window !== "undefined") window.SHOP = SHOP;
+if (typeof module !== "undefined") module.exports = SHOP;
