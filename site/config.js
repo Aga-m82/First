@@ -84,15 +84,15 @@ const SHOP = {
     },
     {
       id: "ai-agents-course",
-      type: "Ebook",
+      type: "Ebook + platform",
       emoji: "🤖",
       title: "AI Automation for Small Businesses",
-      tagline: "Hand repetitive tasks to AI and get hours back every week.",
+      tagline: "The ebook plus an interactive platform that does the work with you.",
       description:
-        "A practical 41-page ebook for small business owners, freelancers and sole traders. Learn where AI really helps, write prompts that work, and set up simple automations for emails, invoices, social posts, customer questions and data entry. No coding needed: every recipe has steps you can copy, a test and a safety check.",
-      includes: ["30 ready-to-use AI prompts", "10 copy-and-use automation recipes", "Tool comparison guide (free vs. paid)", "Time-Saved Calculator (Excel / Google Sheets)", "Profit dashboard & sales audit", "Safe AI checklists and a 7-day plan"],
-      price: 39,
-      stripeLink: "", // TODO: new €39 Payment Link
+        "Start with the 41-page ebook, then put it into practice in your own AI Automation Platform, which works in your browser on phone or laptop. Fill in ready-made prompts and copy them in one click (or open them straight in ChatGPT or Claude), set up 10 automations with step-by-step checklists, see how many hours you get back, and check your profit and shop with the built-in dashboard and audit. No coding needed.",
+      includes: ["41-page ebook (PDF + Word)", "Interactive AI Automation Platform (phone & laptop)", "Prompt Studio: 37 prompts, fill in & copy in one click", "10 automation recipes with progress tracking", "Time-Saved Calculator & Tool Finder", "Profit dashboard, sales audit & 7-day plan"],
+      price: 79,
+      stripeLink: "https://buy.stripe.com/7sY8wRgMvfCt8DNf5s6oo04",
     },
     {
       id: "data-course",
@@ -125,7 +125,7 @@ const SHOP = {
       title: "The Complete Business Toolkit",
       tagline: "Every template, kit and course above — one price.",
       description:
-        "Get all 7 products together, worth €398 if bought separately. Includes every future update to the templates, ebook and courses, plus a 30-minute one-to-one automation review call with me to choose what to set up first in your business.",
+        "Get all 7 products together, worth €438 if bought separately. Includes every future update to the templates, ebook, platform and courses, plus a 30-minute one-to-one automation review call with me to choose what to set up first in your business.",
       includes: ["All 7 products above", "Free future updates", "30-min 1:1 automation review call", "Priority email support"],
       price: 249,
       salePrice: 199,
