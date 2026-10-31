@@ -1,0 +1,8 @@
+{
+  "name": "agas-digital-work-studio",
+  "private": true,
+  "description": "Website and Netlify functions for Aga's Digital Work Studio",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.3.0"
+  }
+}
