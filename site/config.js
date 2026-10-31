@@ -84,13 +84,13 @@ const SHOP = {
     },
     {
       id: "ai-agents-course",
-      type: "Ebook + platform",
+      type: "Platform + ebook",
       emoji: "🤖",
       title: "AI Automation for Small Businesses",
-      tagline: "The ebook plus an interactive platform that does the work with you.",
+      tagline: "An interactive platform that helps you hand repetitive work to AI.",
       description:
-        "Start with the 41-page ebook, then put it into practice in your own AI Automation Platform, which works in your browser on phone or laptop. Fill in ready-made prompts and copy them in one click (or open them straight in ChatGPT or Claude), set up 10 automations with step-by-step checklists, see how many hours you get back, and check your profit and shop with the built-in dashboard and audit. No coding needed.",
-      includes: ["41-page ebook (PDF + Word)", "Interactive AI Automation Platform (phone & laptop)", "Prompt Studio: 37 prompts, fill in & copy in one click", "10 automation recipes with progress tracking", "Time-Saved Calculator & Tool Finder", "Profit dashboard, sales audit & 7-day plan"],
+        "Your own AI Automation Platform, working in your browser on phone or laptop. Fill in ready-made prompts and copy them in one click (or open them straight in ChatGPT or Claude), set up 10 automations with step-by-step checklists, see how many hours you get back, and check your profit and shop with the built-in dashboard and audit. Includes the 41-page AI Automation ebook. No coding needed.",
+      includes: ["Interactive AI Automation Platform (phone & laptop)", "Prompt Studio: 37 prompts, fill in & copy in one click", "10 automation recipes with progress tracking", "Time-Saved Calculator & Tool Finder", "Profit dashboard, sales audit & 7-day plan", "Plus: 41-page AI Automation ebook (PDF + Word)"],
       price: 79,
       stripeLink: "https://buy.stripe.com/7sY8wRgMvfCt8DNf5s6oo04",
     },
