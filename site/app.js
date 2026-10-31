@@ -40,7 +40,7 @@
   // ---------- Product grid ----------
   const grid = $("#productGrid");
   const filters = $("#filters");
-  const groups = { All: () => true, Templates: (p) => /template|kit|toolkit/i.test(p.type), Courses: (p) => /course/i.test(p.type), Bundle: (p) => /bundle/i.test(p.type) };
+  const groups = { All: () => true, Templates: (p) => /template|kit|toolkit/i.test(p.type), "Courses & ebooks": (p) => /course|ebook|platform/i.test(p.type), Bundle: (p) => /bundle/i.test(p.type) };
 
   Object.keys(groups).forEach((name, i) => {
     const b = document.createElement("button");
@@ -103,12 +103,23 @@
     stripeBtn.hidden = !hasStripe;
     $("#payOr").hidden = !hasStripe;
     if (hasStripe) stripeBtn.href = cardLink;
+    $("#consent").checked = false;
+    $("#consentMsg").hidden = true;
 
     modal.hidden = false;
     document.body.style.overflow = "hidden";
     modal.querySelector(".modal-close").focus();
     renderPayPal(p);
   }
+
+  // EU rule for digital content: the buyer must agree to immediate delivery before paying.
+  const consentGiven = () => {
+    const ok = $("#consent").checked;
+    $("#consentMsg").hidden = ok;
+    return ok;
+  };
+  $("#stripeBtn").addEventListener("click", (e) => { if (!consentGiven()) e.preventDefault(); });
+  $("#consent").addEventListener("change", consentGiven);
 
   function closeModal() {
     modal.hidden = true;
@@ -154,6 +165,7 @@
         box.innerHTML = "";
         return paypal.Buttons({
           style: { layout: "vertical", color: "gold", shape: "pill", label: "paypal" },
+          onClick: (data, actions) => (consentGiven() ? actions.resolve() : actions.reject()),
           createOrder: () =>
             callPayPal({ action: "create", productId: p.id }).then((d) => d.id),
           onApprove: (data) =>

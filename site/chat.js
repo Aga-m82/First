@@ -25,7 +25,7 @@
     panel.hidden = false;
     toggle.setAttribute("aria-expanded", "true");
     if (!log.children.length) {
-      add("assistant", "Hi! I'm Aga's assistant 👋 Ask me about the templates and courses, Black Friday deals, payment or delivery — or leave a message for Aga.");
+      add("assistant", "Hi! I'm Aga's assistant 👋 Ask me about the products, the Black Friday offers, payment or delivery. Or leave a message and Aga will get back to you.");
     }
     input.focus();
   }
