@@ -40,7 +40,7 @@
   // ---------- Product grid ----------
   const grid = $("#productGrid");
   const filters = $("#filters");
-  const groups = { All: () => true, Templates: (p) => /template|kit|toolkit/i.test(p.type), Courses: (p) => /course/i.test(p.type), Bundle: (p) => /bundle/i.test(p.type) };
+  const groups = { All: () => true, Templates: (p) => /template|kit|toolkit/i.test(p.type), "Courses & ebooks": (p) => /course|ebook/i.test(p.type), Bundle: (p) => /bundle/i.test(p.type) };
 
   Object.keys(groups).forEach((name, i) => {
     const b = document.createElement("button");

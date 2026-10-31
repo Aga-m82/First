@@ -84,13 +84,13 @@ const SHOP = {
     },
     {
       id: "ai-agents-course",
-      type: "Mini course",
+      type: "Ebook",
       emoji: "🤖",
-      title: "AI Agents & Automation for Small Business",
+      title: "AI Automation for Small Businesses",
       tagline: "Hand repetitive tasks to AI and get hours back every week.",
       description:
-        "A practical mini course showing which everyday jobs you can automate today — emails, invoices, social posts, customer questions and data entry. No coding needed. Each lesson ends with a working automation you can copy into your own business.",
-      includes: ["6 short written lessons", "10 copy-and-use automation recipes", "Tool comparison guide (free vs. paid)", "Time-saved calculator", "Bonus: 30-page AI ebook with 30 prompts"],
+        "A practical 41-page ebook for small business owners, freelancers and sole traders. Learn where AI really helps, write prompts that work, and set up simple automations for emails, invoices, social posts, customer questions and data entry. No coding needed: every recipe has steps you can copy, a test and a safety check.",
+      includes: ["30 ready-to-use AI prompts", "10 copy-and-use automation recipes", "Tool comparison guide (free vs. paid)", "Time-Saved Calculator (Excel / Google Sheets)", "Profit dashboard & sales audit", "Safe AI checklists and a 7-day plan"],
       price: 79,
       stripeLink: "https://buy.stripe.com/7sY8wRgMvfCt8DNf5s6oo04",
     },
