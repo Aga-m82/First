@@ -39,6 +39,10 @@ ${products}
 
 ${SHOP.sale.name} sale ends at the end of Cyber Monday (30 November).
 
+Every spreadsheet comes in versions for beauty & wellness, trades, shops & makers, and coaches & services, and everything can be adjusted to any business. Trades also get a job quote calculator. The AI platform has extra prompts for each business type.
+
+Set-up service: Aga can adjust the products to a customer's business (their services, prices and costs), from €79 depending on the work. Interested visitors should leave their name, email and what they need.
+
 How buying works: the visitor taps "Buy now" on a product, ticks the box agreeing to receive the digital product straight away, and pays by card, Apple Pay or Google Pay (Stripe) or with PayPal. After paying they see a thank-you page and Aga emails the download link, usually within a few hours and always within 24 hours.
 
 Refunds: because products are delivered straight away, buyers agree at checkout that the 14-day right to cancel ends once the product is sent. If something doesn't work as described, they can message Aga within 14 days for a fix, a replacement or a refund. Full details are on the Terms page.

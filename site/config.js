@@ -40,7 +40,7 @@ const SHOP = {
       tagline: "Find out if a discount will make you money or cost you money, before you run it.",
       description:
         "This is the spreadsheet from my Black Friday carousel. Type in your price, your cost and the discount you have in mind, and it shows your profit per sale, your break-even point and how many extra sales you'd need just to earn the same. Another tab compares a discount with a free gift, a bundle or early access, so you can choose the offer that keeps your margin.",
-      includes: ["Excel & Google Sheets template", "Break-even & extra-sales calculator", "Bundle vs. discount comparison", "Check up to 30 products at once", "Step-by-step guide inside", "Bonus: Black Friday Profit Playbook (12 offers that protect profit)"],
+      includes: ["Excel & Google Sheets template", "Break-even & extra-sales calculator", "Bundle vs. discount comparison", "Check up to 30 products at once", "Versions for beauty, trades, shops & coaches", "Job quote calculator for trades", "Step-by-step guide inside", "Bonus: Black Friday Profit Playbook (12 offers that protect profit)"],
       price: 19,
       salePrice: 12,
       stripeLink: "https://buy.stripe.com/aFa6oJeEndul7zJ0ay6oo09",
@@ -54,7 +54,7 @@ const SHOP = {
       tagline: "Your best sellers, slow months and real profit, all on one screen.",
       description:
         "I built this the same way I analyse data for businesses. Paste in your sales export from Shopify, Etsy, Square, Stripe or your own spreadsheet, and the dashboard shows your sales, profit, top products, repeat customers and how each month went. You don't have to write a single formula.",
-      includes: ["Excel & Google Sheets template", "Profit, trends & top-product charts", "Import guide for Shopify, Etsy, Square, Stripe & more", "Bonus: One-Page Business Dashboard", "Bonus: Dashboard Guide & 10 AI prompts for your data"],
+      includes: ["Excel & Google Sheets template", "Versions for beauty, trades, shops & coaches", "Profit, trends & top-product charts", "Import guide for Shopify, Etsy, Square, Stripe & more", "Bonus: One-Page Business Dashboard", "Bonus: Dashboard Guide & 10 AI prompts for your data"],
       price: 39,
       stripeLink: "https://buy.stripe.com/6oU28t7bVai94nxcXk6oo01",
     },
@@ -66,7 +66,7 @@ const SHOP = {
       tagline: "Stop losing money to missed appointments.",
       description:
         "Email and text reminders for salons, clinics, coaches and anyone who works by appointment. You set it up once, which takes about an hour, and then it runs by itself: a confirmation when someone books, a reminder 24 hours before, and a friendly message to rebook if they miss it. Everything uses free or low-cost tools.",
-      includes: ["Ready-to-copy automation workflows", "7 ready-to-use message templates (email + text)", "Setup guide for Google Calendar & booking tools", "No-show tracking sheet", "Free Google Sheets reminder script", "Printable booking policy sign + copy-paste templates"],
+      includes: ["Ready-to-copy automation workflows", "7 ready-to-use message templates (email + text)", "Setup guide for Google Calendar & booking tools", "No-show tracking sheet (beauty, trades & coaching versions)", "Free Google Sheets reminder script", "Printable booking policy sign + copy-paste templates"],
       price: 29,
       stripeLink: "https://buy.stripe.com/00w3cxdAjgGxdY7bTg6oo02",
     },
@@ -90,7 +90,7 @@ const SHOP = {
       tagline: "An interactive platform that helps you hand your repetitive work to AI.",
       description:
         "Your own AI Automation Platform, which opens in your browser on your phone or laptop. Fill in ready-made prompts and copy them with one click, or open them straight in ChatGPT or Claude. Set up 10 automations, build your own AI agents with step-by-step tutorials, see how many hours you could save, and check your profit and your shop with the built-in dashboard and audit. The 48-page ebook is included too, and you don't need any coding.",
-      includes: ["Interactive AI Automation Platform (phone & laptop)", "Prompt Studio: 37 prompts, fill in & copy in one click", "AI Agents: build 4 agents step by step + Agent Builder", "10 automation recipes with progress tracking", "Time-Saved Calculator & Tool Finder", "Profit dashboard, sales audit & 7-day plan", "Plus: 48-page AI Automation ebook (PDF + Word)"],
+      includes: ["Interactive AI Automation Platform (phone & laptop)", "Prompt Studio: 37 prompts + extra prompts for your business type", "AI Agents: build 4 agents step by step + Agent Builder", "10 automation recipes with progress tracking", "Time-Saved Calculator & Tool Finder", "Profit dashboard, sales audit & 7-day plan", "Plus: 48-page AI Automation ebook (PDF + Word)"],
       price: 79,
       stripeLink: "https://buy.stripe.com/7sY8wRgMvfCt8DNf5s6oo04",
     },
@@ -102,7 +102,7 @@ const SHOP = {
       tagline: "Turn your numbers into decisions that grow profit.",
       description:
         "Everything I've learned from 16 years of running operations on data, plus my Level 7 and 8 data analytics studies, explained simply for owners who don't see themselves as numbers people. You'll learn to read your sales, see what really makes you money, price with confidence and stop guessing.",
-      includes: ["8 modules, beginner friendly", "Small-business case studies", "Pricing & profit worksheets", "Sales Dashboard template included", "Certificate of completion", "Bonus: Cash-Flow Tracker + 12-month review workbook"],
+      includes: ["8 modules, beginner friendly", "Small-business case studies", "Pricing & profit worksheets", "Sales Dashboard in 4 business versions + job quote calculator", "Certificate of completion", "Bonus: Cash-Flow Tracker + 12-month review workbook"],
       price: 149,
       stripeLink: "https://buy.stripe.com/eVqeVf3ZJdul9HR8H46oo05",
     },

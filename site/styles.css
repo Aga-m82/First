@@ -304,3 +304,7 @@ details p { margin: 12px 0 0; color: var(--muted); }
 .consent { display: flex; gap: 10px; align-items: flex-start; font-size: .88rem; color: var(--ink); margin-bottom: 12px; line-height: 1.45; }
 .consent input { margin-top: 3px; width: 18px; height: 18px; flex-shrink: 0; accent-color: var(--teal); }
 .avatar-photo { object-fit: cover; display: block; padding: 0; background: var(--teal-soft); }
+.cards-4 { grid-template-columns: repeat(4, 1fr); }
+.note-setup { background: var(--teal-soft); margin-bottom: 16px; }
+@media (max-width: 1000px) { .cards-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .cards-4 { grid-template-columns: 1fr; } }
