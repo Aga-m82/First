@@ -130,6 +130,19 @@
     return paypalReady;
   }
 
+  // Orders are created and captured by netlify/functions/paypal.js,
+  // so the price always comes from config.js and can't be changed in the browser.
+  function callPayPal(body) {
+    return fetch("/.netlify/functions/paypal", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    }).then((r) => r.json().then((d) => {
+      if (!r.ok) throw new Error(d.error || "Payment error");
+      return d;
+    }));
+  }
+
   function renderPayPal(p) {
     const box = $("#paypalButtons");
     box.innerHTML = '<p class="pay-msg">Loading PayPal…</p>';
@@ -138,20 +151,19 @@
         box.innerHTML = "";
         return paypal.Buttons({
           style: { layout: "vertical", color: "gold", shape: "pill", label: "paypal" },
-          createOrder: (data, actions) =>
-            actions.order.create({
-              purchase_units: [{
-                reference_id: p.id,
-                description: p.title.slice(0, 127),
-                amount: { currency_code: S.currency, value: priceOf(p).toFixed(2) },
-              }],
-              application_context: { shipping_preference: "NO_SHIPPING" },
+          createOrder: () =>
+            callPayPal({ action: "create", productId: p.id }).then((d) => d.id),
+          onApprove: (data) =>
+            callPayPal({ action: "capture", orderId: data.orderID }).then(() => {
+              location.href = `thank-you.html?product=${encodeURIComponent(p.id)}&order=${encodeURIComponent(data.orderID)}`;
             }),
-          onApprove: (data, actions) =>
-            actions.order.capture().then((order) => {
-              location.href = `thank-you.html?product=${encodeURIComponent(p.id)}&order=${encodeURIComponent(order.id)}`;
-            }),
-          onError: () => { box.insertAdjacentHTML("afterbegin", '<p class="pay-msg">Something went wrong with PayPal. Please try again or pay by card.</p>'); },
+          onError: (err) => {
+            box.querySelectorAll(".pay-msg").forEach((m) => m.remove());
+            const msg = document.createElement("p");
+            msg.className = "pay-msg";
+            msg.textContent = "Something went wrong with PayPal. Please try again or pay by card." + (err && err.message ? " (" + err.message + ")" : "");
+            box.prepend(msg);
+          },
         }).render(box);
       })
       .catch(() => { box.innerHTML = '<p class="pay-msg">PayPal could not load. Please refresh or pay by card.</p>'; });
