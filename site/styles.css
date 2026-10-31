@@ -289,3 +289,15 @@ details p { margin: 12px 0 0; color: var(--muted); }
 .chat-form input { flex: 1; min-width: 0; border: 1px solid var(--line); border-radius: 999px; padding: 10px 14px; font: inherit; }
 .chat-form input:focus { outline: 2px solid var(--teal-soft); border-color: var(--teal); }
 .chat-note { margin: 0; padding: 6px 12px 10px; font-size: .72rem; color: var(--muted); background: var(--white); text-align: center; }
+.chat-teaser {
+  position: fixed; right: 16px; bottom: 84px; z-index: 41;
+  display: flex; align-items: flex-start; gap: 4px;
+  max-width: calc(100vw - 32px);
+  background: var(--white); border: 2px solid var(--gold); border-radius: 16px; border-bottom-right-radius: 4px;
+  box-shadow: 0 10px 30px rgba(14, 75, 74, .2); animation: teaser-in .3s ease-out;
+}
+.chat-teaser-open { background: none; border: 0; padding: 12px 4px 12px 14px; font: 500 .95rem "Inter", sans-serif; color: var(--ink); text-align: left; cursor: pointer; }
+.chat-teaser-open strong { color: var(--teal); }
+.chat-teaser-close { background: none; border: 0; color: var(--muted); font-size: 1.3rem; padding: 6px 10px; cursor: pointer; line-height: 1; }
+@keyframes teaser-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .chat-teaser { animation: none; } }

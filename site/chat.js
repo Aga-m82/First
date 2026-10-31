@@ -92,5 +92,20 @@
     ask(text);
   });
   if (new URLSearchParams(location.search).get("chat") === "1") open();
+
+  // Greet visitors with a small bubble after a few seconds, once per visit.
+  const teaser = $("#chatTeaser");
+  let seen = false;
+  try { seen = sessionStorage.getItem("chatTeaserSeen") === "1"; } catch (e) {}
+  function hideTeaser() {
+    teaser.hidden = true;
+    try { sessionStorage.setItem("chatTeaserSeen", "1"); } catch (e) {}
+  }
+  if (!seen) {
+    setTimeout(() => { if (panel.hidden) teaser.hidden = false; }, 6000);
+  }
+  teaser.querySelector(".chat-teaser-open").addEventListener("click", () => { hideTeaser(); open(); });
+  teaser.querySelector(".chat-teaser-close").addEventListener("click", hideTeaser);
+  toggle.addEventListener("click", hideTeaser);
   chips.querySelectorAll("button").forEach((b) => b.addEventListener("click", () => ask(b.textContent)));
 })();
