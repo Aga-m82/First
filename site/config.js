@@ -10,7 +10,7 @@ window.SHOP = {
   // 1. Go to https://developer.paypal.com/dashboard/applications
   // 2. Create a "Live" app and copy its Client ID here.
   //    ("sb" = PayPal sandbox test mode, no real money moves)
-  paypalClientId: "sb",
+  paypalClientId: "BAAIc0pfrkICRAquWMYZIjM50_2zFy3d6DjrwT4H75dhO9A8rZpEsir72SJMU1fua4iJbwp27cpJgLL6mY",
 
   // --- Black Friday sale ---------------------------------------
   // While the sale is on, the "salePrice" is charged. After the end
