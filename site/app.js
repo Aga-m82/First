@@ -8,7 +8,9 @@
   const saleStart = new Date(S.sale.start).getTime();
   const saleEnd = new Date(S.sale.end).getTime();
   const saleOn = now >= saleStart && now < saleEnd;
-  const priceOf = (p) => (saleOn ? p.salePrice : p.price);
+  const onSale = (p) => saleOn && p.salePrice != null && p.salePrice < p.price;
+  const priceOf = (p) => (onSale(p) ? p.salePrice : p.price);
+  const cardLinkOf = (p) => (onSale(p) ? p.stripeLinkSale : p.stripeLink);
 
   // ---------- Banner + countdown ----------
   const bar = $("#bfBar");
@@ -54,7 +56,7 @@
   });
 
   function priceHTML(p) {
-    if (!saleOn) return `<div class="prices"><span class="price-now">${money(p.price)}</span></div>`;
+    if (!onSale(p)) return `<div class="prices"><span class="price-now">${money(p.price)}</span></div>`;
     const pct = Math.round((1 - p.salePrice / p.price) * 100);
     return `<div class="prices"><span class="price-now">${money(p.salePrice)}</span><span class="price-was">${money(p.price)}</span><span class="save">save ${pct}%</span></div>`;
   }
@@ -66,7 +68,7 @@
       el.className = "product" + (p.featured ? " featured" : "");
       const pct = Math.round((1 - p.salePrice / p.price) * 100);
       el.innerHTML = `
-        ${saleOn ? `<span class="badge">-${pct}%</span>` : ""}
+        ${onSale(p) ? `<span class="badge">Black Friday -${pct}%</span>` : ""}
         <div class="emoji" aria-hidden="true">${p.emoji}</div>
         <span class="type">${p.type}</span>
         <h3>${p.title}</h3>
@@ -96,10 +98,11 @@
     $("#modalPrice").innerHTML = priceHTML(p);
 
     const stripeBtn = $("#stripeBtn");
-    const hasStripe = !!p.stripeLink;
+    const cardLink = cardLinkOf(p);
+    const hasStripe = !!cardLink;
     stripeBtn.hidden = !hasStripe;
     $("#payOr").hidden = !hasStripe;
-    if (hasStripe) stripeBtn.href = p.stripeLink;
+    if (hasStripe) stripeBtn.href = cardLink;
 
     modal.hidden = false;
     document.body.style.overflow = "hidden";

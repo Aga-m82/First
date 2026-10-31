@@ -13,8 +13,10 @@ const SHOP = {
   paypalClientId: "BAAIc0pfrkICRAquWMYZIjM50_2zFy3d6DjrwT4H75dhO9A8rZpEsir72SJMU1fua4iJbwp27cpJgLL6mY",
 
   // --- Black Friday sale ---------------------------------------
-  // While the sale is on, the "salePrice" is charged. After the end
-  // date the site automatically switches back to the normal price.
+  // While the sale is on, products that have a "salePrice" are charged
+  // that price and paid by card via "stripeLinkSale". After the end date
+  // the site automatically switches back to "price" and "stripeLink".
+  // Products without a salePrice are not part of the sale.
   sale: {
     name: "Black Friday",
     start: "2026-10-30T00:00:00+00:00",
@@ -22,12 +24,13 @@ const SHOP = {
   },
 
   // --- Products ------------------------------------------------
-  // stripeLink: create a Payment Link per product in Stripe
-  //   (Dashboard → Payment Links → New). Set the price to the
-  //   Black Friday price, and in "After payment" choose
-  //   "Don't show confirmation page → redirect to your website"
-  //   and enter: https://YOUR-SITE/thank-you.html
-  // Leave stripeLink empty ("") to hide the Stripe button.
+  // stripeLink: a Stripe Payment Link at the NORMAL price.
+  // stripeLinkSale: a Stripe Payment Link at the SALE price (only for
+  //   products with a salePrice).
+  //   Create them in Stripe (Payment Links → New). In "After payment"
+  //   choose "Don't show confirmation page → redirect to your website"
+  //   and enter: https://YOUR-SITE/thank-you.html?product=PRODUCT-ID
+  // Leave a link empty ("") to hide the card button while it is needed.
   products: [
     {
       id: "profit-calculator",
@@ -40,7 +43,8 @@ const SHOP = {
       includes: ["Google Sheets template (copy in 1 click)", "Break-even & extra-sales calculator", "Bundle vs. discount comparison", "Short video walkthrough"],
       price: 19,
       salePrice: 12,
-      stripeLink: "https://buy.stripe.com/7sYfZj67RfCt07h9L86oo00",
+      stripeLink: "https://buy.stripe.com/aFa6oJeEndul7zJ0ay6oo09",
+      stripeLinkSale: "https://buy.stripe.com/7sYfZj67RfCt07h9L86oo00",
     },
     {
       id: "sales-dashboard",
@@ -52,8 +56,7 @@ const SHOP = {
         "A plug-and-play dashboard built the way I analyse data for businesses. Paste in your sales export (Shopify, Etsy, Square, Stripe or a simple spreadsheet) and get revenue, profit, top products, repeat customers and month-by-month trends — no formulas to write.",
       includes: ["Google Sheets + Looker Studio versions", "Profit, trends & top-product charts", "Import guide for common shop platforms", "Step-by-step setup video"],
       price: 39,
-      salePrice: 27,
-      stripeLink: "",
+      stripeLink: "https://buy.stripe.com/6oU28t7bVai94nxcXk6oo01",
     },
     {
       id: "no-show-kit",
@@ -65,8 +68,7 @@ const SHOP = {
         "Automatic email and SMS reminders for salons, clinics, coaches and any appointment-based business. Set it up once in about an hour and it runs on its own — confirmation, 24-hour reminder and a polite rebooking message. Built with free or low-cost tools.",
       includes: ["Ready-to-copy automation workflows", "7 tested reminder message templates", "Setup guide for Google Calendar & booking tools", "No-show tracking sheet"],
       price: 29,
-      salePrice: 19,
-      stripeLink: "",
+      stripeLink: "https://buy.stripe.com/00w3cxdAjgGxdY7bTg6oo02",
     },
     {
       id: "reviews-ai",
@@ -78,8 +80,7 @@ const SHOP = {
         "A set of AI prompts and a simple system for answering Google reviews quickly and professionally, including the tricky negative ones. Plus templates to politely ask happy customers for reviews so your rating keeps climbing.",
       includes: ["40+ AI prompts for positive, neutral & negative reviews", "Review-request message templates", "Brand-voice setup worksheet", "Works with ChatGPT, Claude or Gemini"],
       price: 24,
-      salePrice: 15,
-      stripeLink: "",
+      stripeLink: "https://buy.stripe.com/cNiaEZ7bV3TL6vFaPc6oo03",
     },
     {
       id: "ai-agents-course",
@@ -91,8 +92,7 @@ const SHOP = {
         "A practical mini course showing which everyday jobs you can automate today — emails, invoices, social posts, customer questions and data entry. No coding needed. Each lesson ends with a working automation you can copy into your own business.",
       includes: ["6 short video lessons", "10 copy-and-use automation recipes", "Tool comparison guide (free vs. paid)", "Time-saved calculator"],
       price: 79,
-      salePrice: 55,
-      stripeLink: "",
+      stripeLink: "https://buy.stripe.com/7sY8wRgMvfCt8DNf5s6oo04",
     },
     {
       id: "data-course",
@@ -104,8 +104,7 @@ const SHOP = {
         "Everything I learned from 16 years of running operations on data and my Level 7 & 8 data analytics studies — made simple for owners who are not 'numbers people'. Learn to read your sales, spot what's really making money, price with confidence and stop guessing.",
       includes: ["8 modules, beginner friendly", "Real small-business case studies", "Pricing & profit worksheets", "Sales Dashboard template included", "Certificate of completion"],
       price: 149,
-      salePrice: 99,
-      stripeLink: "",
+      stripeLink: "https://buy.stripe.com/eVqeVf3ZJdul9HR8H46oo05",
     },
     {
       id: "digital-products-course",
@@ -117,8 +116,7 @@ const SHOP = {
         "A step-by-step course on turning what you already know into templates, guides and mini courses that sell while you sleep — without losing money on tools, ads or deep discounts. Covers idea validation, pricing for profit, building in Canva and Google, and setting up payments.",
       includes: ["7 modules from idea to first sale", "Pricing-for-profit framework", "Canva product & launch templates", "Stripe + PayPal setup checklist"],
       price: 99,
-      salePrice: 69,
-      stripeLink: "",
+      stripeLink: "https://buy.stripe.com/6oUdRb0Nx4XPf2b0ay6oo06",
     },
     {
       id: "complete-bundle",
@@ -131,8 +129,9 @@ const SHOP = {
       includes: ["All 7 products above", "Free future updates", "30-min 1:1 automation review call", "Priority email support"],
       price: 438,
       salePrice: 199,
+      stripeLinkSale: "https://buy.stripe.com/5kQ28tgMv8a13jt0ay6oo07",
       featured: true,
-      stripeLink: "",
+      stripeLink: "https://buy.stripe.com/00w5kFdAj4XP9HR1eC6oo08",
     },
   ],
 };
