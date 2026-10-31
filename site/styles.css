@@ -301,3 +301,6 @@ details p { margin: 12px 0 0; color: var(--muted); }
 .chat-teaser-close { background: none; border: 0; color: var(--muted); font-size: 1.3rem; padding: 6px 10px; cursor: pointer; line-height: 1; }
 @keyframes teaser-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .chat-teaser { animation: none; } }
+.consent { display: flex; gap: 10px; align-items: flex-start; font-size: .88rem; color: var(--ink); margin-bottom: 12px; line-height: 1.45; }
+.consent input { margin-top: 3px; width: 18px; height: 18px; flex-shrink: 0; accent-color: var(--teal); }
+.avatar-photo { object-fit: cover; display: block; padding: 0; background: var(--teal-soft); }
