@@ -19,7 +19,8 @@ const json = (statusCode, body) => ({
 function currentPrice(product) {
   const now = Date.now();
   const saleOn = now >= new Date(SHOP.sale.start).getTime() && now < new Date(SHOP.sale.end).getTime();
-  return saleOn ? product.salePrice : product.price;
+  const onSale = saleOn && product.salePrice != null && product.salePrice < product.price;
+  return onSale ? product.salePrice : product.price;
 }
 
 async function accessToken() {

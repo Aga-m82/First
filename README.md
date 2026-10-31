@@ -40,10 +40,11 @@ To automate this, put the files in a delivery tool (e.g. Stripe Payment Link
 Zapier/Make automation: *new Stripe/PayPal payment → send email with link*).
 
 ## 4. Black Friday prices
-In `config.js`, `sale.start` / `sale.end` control the sale. While it's on, the site
-shows the `salePrice` with the old price crossed out and a countdown. After
-`end`, it switches back to `price` automatically. **Remember** to change the price
-on your Stripe Payment Links too when the sale ends.
+In `config.js`, `sale.start` / `sale.end` control the sale. Only products with a
+`salePrice` are on sale (currently the Profit Calculator and the Complete Toolkit).
+While the sale is on they show the sale price, a countdown, and use `stripeLinkSale`
+for card payments. After `end` the site switches to `price` and `stripeLink`
+automatically, so create both Stripe links for sale products.
 
 ## 5. Things to fill in
 - Email address `hello@agasdigitalworkstudio.com` (index.html and thank-you.html) — replace with your real one.
