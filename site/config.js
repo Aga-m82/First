@@ -40,7 +40,7 @@ const SHOP = {
       tagline: "Know if a discount makes or loses you money — before you run it.",
       description:
         "The ready-made spreadsheet from my Black Friday carousel. Type in your price, cost and discount and it instantly shows your profit per sale, your break-even and how many extra sales you need just to stand still. Includes a bundle and free-gift comparison tab so you can pick the offer that protects your margin.",
-      includes: ["Excel & Google Sheets template", "Break-even & extra-sales calculator", "Bundle vs. discount comparison", "Check up to 30 products at once", "Step-by-step guide inside"],
+      includes: ["Excel & Google Sheets template", "Break-even & extra-sales calculator", "Bundle vs. discount comparison", "Check up to 30 products at once", "Step-by-step guide inside", "Bonus: Black Friday Profit Playbook (12 offers that protect profit)"],
       price: 19,
       salePrice: 12,
       stripeLink: "https://buy.stripe.com/aFa6oJeEndul7zJ0ay6oo09",
@@ -54,7 +54,7 @@ const SHOP = {
       tagline: "See your best sellers, slow months and real profit on one screen.",
       description:
         "A plug-and-play dashboard built the way I analyse data for businesses. Paste in your sales export (Shopify, Etsy, Square, Stripe or a simple spreadsheet) and get revenue, profit, top products, repeat customers and month-by-month trends — no formulas to write.",
-      includes: ["Excel & Google Sheets template", "Profit, trends & top-product charts", "Import guide for Shopify, Etsy, Square, Stripe & more", "Bonus: One-Page Business Dashboard"],
+      includes: ["Excel & Google Sheets template", "Profit, trends & top-product charts", "Import guide for Shopify, Etsy, Square, Stripe & more", "Bonus: One-Page Business Dashboard", "Bonus: Dashboard Guide & 10 AI prompts for your data"],
       price: 39,
       stripeLink: "https://buy.stripe.com/6oU28t7bVai94nxcXk6oo01",
     },
@@ -66,7 +66,7 @@ const SHOP = {
       tagline: "Stop losing money to missed appointments.",
       description:
         "Automatic email and SMS reminders for salons, clinics, coaches and any appointment-based business. Set it up once in about an hour and it runs on its own — confirmation, 24-hour reminder and a polite rebooking message. Built with free or low-cost tools.",
-      includes: ["Ready-to-copy automation workflows", "7 ready-to-use message templates (email + text)", "Setup guide for Google Calendar & booking tools", "No-show tracking sheet", "Free Google Sheets reminder script"],
+      includes: ["Ready-to-copy automation workflows", "7 ready-to-use message templates (email + text)", "Setup guide for Google Calendar & booking tools", "No-show tracking sheet", "Free Google Sheets reminder script", "Printable booking policy sign + copy-paste templates"],
       price: 29,
       stripeLink: "https://buy.stripe.com/00w3cxdAjgGxdY7bTg6oo02",
     },
@@ -78,7 +78,7 @@ const SHOP = {
       tagline: "Reply to every review in seconds — in your own voice.",
       description:
         "A set of AI prompts and a simple system for answering Google reviews quickly and professionally, including the tricky negative ones. Plus templates to politely ask happy customers for reviews so your rating keeps climbing.",
-      includes: ["42 AI prompts for positive, neutral & negative reviews", "Review-request message templates", "Brand-voice setup worksheet", "Works with ChatGPT, Claude or Gemini"],
+      includes: ["42 AI prompts for positive, neutral & negative reviews", "Review-request message templates", "Brand-voice setup worksheet", "Works with ChatGPT, Claude or Gemini", "Bonus: printable review cards + 30-day review plan"],
       price: 24,
       stripeLink: "https://buy.stripe.com/cNiaEZ7bV3TL6vFaPc6oo03",
     },
@@ -102,7 +102,7 @@ const SHOP = {
       tagline: "Turn your numbers into decisions that grow profit.",
       description:
         "Everything I learned from 16 years of running operations on data and my Level 7 & 8 data analytics studies — made simple for owners who are not 'numbers people'. Learn to read your sales, spot what's really making money, price with confidence and stop guessing.",
-      includes: ["8 modules, beginner friendly", "Small-business case studies", "Pricing & profit worksheets", "Sales Dashboard template included", "Certificate of completion", "Bonus: Cash-Flow Tracker"],
+      includes: ["8 modules, beginner friendly", "Small-business case studies", "Pricing & profit worksheets", "Sales Dashboard template included", "Certificate of completion", "Bonus: Cash-Flow Tracker + 12-month review workbook"],
       price: 149,
       stripeLink: "https://buy.stripe.com/eVqeVf3ZJdul9HR8H46oo05",
     },
@@ -114,7 +114,7 @@ const SHOP = {
       tagline: "Create a product once, sell it again and again.",
       description:
         "A step-by-step course on turning what you already know into templates, guides and mini courses that sell while you sleep — without losing money on tools, ads or deep discounts. Covers idea validation, pricing for profit, building in Canva and Google, and setting up payments.",
-      includes: ["7 modules from idea to first sale", "Pricing-for-profit framework + calculator", "Product & launch templates (for Canva)", "Stripe + PayPal setup checklist"],
+      includes: ["7 modules from idea to first sale", "Pricing-for-profit framework + calculator", "Product & launch templates (for Canva)", "Stripe + PayPal setup checklist", "Bonus: 100 digital product ideas"],
       price: 99,
       stripeLink: "https://buy.stripe.com/6oUdRb0Nx4XPf2b0ay6oo06",
     },
