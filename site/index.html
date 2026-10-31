@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aga's Digital Work Studio — Templates, Automation & Courses</title>
+  <meta name="description" content="Data-driven templates, automation kits and courses that help small businesses save time and protect their profit. Black Friday prices now on.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Black Friday banner -->
+  <div class="bf-bar" id="bfBar" hidden>
+    <span class="pill pill-gold">Black Friday</span>
+    <span>Up to <strong>55% off</strong> every product</span>
+    <span class="countdown" id="countdown" aria-live="polite"></span>
+  </div>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="#top" class="logo">Aga<span>’s</span> Digital Work Studio</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#products">Shop</a>
+        <a href="#about">About</a>
+        <a href="#services">Advice</a>
+        <a href="#faq">FAQ</a>
+        <a href="#products" class="btn btn-small">Black Friday deals</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="pill">Data · AI · Automation for small business</span>
+          <h1>Work smarter. <em>Keep more</em> of what you earn.</h1>
+          <p class="lead">Ready-made templates, automation kits and courses built by a data analyst — so you can stop doing repetitive work by hand and stop losing money without noticing.</p>
+          <div class="hero-cta">
+            <a href="#products" class="btn">Shop Black Friday deals</a>
+            <a href="#about" class="btn btn-ghost">Meet Aga</a>
+          </div>
+          <ul class="trust">
+            <li>✓ Instant download</li>
+            <li>✓ Pay with PayPal or card</li>
+            <li>✓ Beginner friendly</li>
+          </ul>
+        </div>
+
+        <div class="receipt" aria-hidden="true">
+          <div class="receipt-title">RECEIPT</div>
+          <div class="row"><span>Hours on admin / week</span><span>10</span></div>
+          <div class="row"><span>Automated with Aga</span><span>-7</span></div>
+          <div class="row"><span>Lost to no-shows</span><span>-€0</span></div>
+          <div class="dash"></div>
+          <div class="row big"><span>Time back</span><span class="circled">7 hrs</span></div>
+          <span class="scribble">every week!</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products" class="section">
+      <div class="wrap">
+        <span class="pill">The shop</span>
+        <h2>Digital products &amp; courses</h2>
+        <p class="section-lead">Every product is something I built to solve a real small-business problem. Pick one, pay securely, and get instant access.</p>
+        <div class="filters" id="filters" role="tablist"></div>
+        <div class="grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section section-tint">
+      <div class="wrap about-grid">
+        <div class="about-card">
+          <div class="avatar">A</div>
+          <h3>Aga</h3>
+          <p class="handle">@agasdigitalworkstudio</p>
+          <p class="quote">“Make the message obvious.”</p>
+          <div class="stats">
+            <div><strong>16</strong><span>years in operations</span></div>
+            <div><strong>L7·8</strong><span>data analytics</span></div>
+            <div><strong>L9</strong><span>AI &amp; ML studies</span></div>
+          </div>
+          <a href="https://www.instagram.com/agasdigitalworkstudio" target="_blank" rel="noopener" class="btn btn-small">Follow on Instagram</a>
+        </div>
+
+        <div>
+          <span class="pill">About me</span>
+          <h2>Hi, I’m Aga — I turn data into decisions.</h2>
+          <p>I’ve spent 16 years working in operations at a large international airport, where I now lead day-to-day service delivery for a big team and manage business projects from first plan to final delivery — keeping them on time, on budget and focused on results. Every shift I plan around the numbers — demand, staffing and risks — so I know first-hand how good data and smart planning save time and money. Now I bring that experience to small businesses: I advise owners on how to automate repetitive work, plan and manage their projects, stop quietly losing money, and turn what they know into digital products that keep earning.</p>
+
+          <h3 class="sub">Education</h3>
+          <div class="timeline">
+            <div class="t-item">
+              <span class="t-dot"></span>
+              <div><strong>Postgraduate in Computer Science — AI &amp; Machine Learning (Level 9)</strong><span>Currently studying · master’s level</span></div>
+            </div>
+            <div class="t-item">
+              <span class="t-dot"></span>
+              <div><strong>Higher Diploma in Data Analytics (Level 8)</strong><span>CCT College Dublin</span></div>
+            </div>
+            <div class="t-item">
+              <span class="t-dot"></span>
+              <div><strong>Diploma in Data Analytics in Business (Level 7)</strong><span>CCT College Dublin</span></div>
+            </div>
+          </div>
+
+          <div class="skills">
+            <span>Power BI</span><span>Excel</span><span>Python</span><span>SQL</span><span>Tableau</span><span>Machine learning</span><span>AI &amp; automation</span><span>Forecasting</span><span>Project management</span><span>KPI management</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES / ADVICE -->
+    <section id="services" class="section">
+      <div class="wrap">
+        <span class="pill">How I help</span>
+        <h2>Automate more. Lose less. Sell smarter.</h2>
+        <p class="section-lead">I advise small businesses on how to automate their day-to-day work and avoid losing money — and how to create digital products that bring in income without extra hours. I also help plan and manage business projects, so new ideas get delivered on time and on budget.</p>
+        <div class="cards-3">
+          <div class="card">
+            <div class="icon">⚙️</div>
+            <h3>Automate the boring bits</h3>
+            <p>Reminders, invoices, review replies, data entry and reports — I show you what to automate first and how, with tools you can afford.</p>
+          </div>
+          <div class="card">
+            <div class="icon">💶</div>
+            <h3>Stop the money leaks</h3>
+            <p>No-shows, deep discounts, thin-margin products, ads that don’t pay off. I use your own data to find where profit disappears — and fix it.</p>
+          </div>
+          <div class="card">
+            <div class="icon">📦</div>
+            <h3>Build digital products</h3>
+            <p>Turn your know-how into templates, guides and courses. Create once, sell many times — priced for profit from day one.</p>
+          </div>
+        </div>
+
+        <div class="note-box">
+          <div>
+            <h3>Want help with your business?</h3>
+            <p>Book a one-to-one automation review. We’ll look at your processes and numbers together and leave with a clear, simple action plan.</p>
+          </div>
+          <a class="btn" href="mailto:hello@agasdigitalworkstudio.com?subject=Automation%20review">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section section-tint">
+      <div class="wrap narrow">
+        <span class="pill">FAQ</span>
+        <h2>Questions, answered</h2>
+        <details><summary>How do I get my product after paying?</summary><p>Right after payment you’re taken to a confirmation page and you’ll receive an email with your download or course access link. If anything doesn’t arrive within an hour, email me and I’ll sort it out.</p></details>
+        <details><summary>Which payment methods do you accept?</summary><p>PayPal (including Pay Later where available) and all major debit and credit cards, Apple Pay and Google Pay via Stripe. Payments are processed securely — I never see your card details.</p></details>
+        <details><summary>How long do the Black Friday prices last?</summary><p>The Black Friday prices run until the end of Cyber Monday. The countdown at the top of the page shows exactly how long is left. After that, prices go back to normal.</p></details>
+        <details><summary>I’m not technical — will I manage?</summary><p>Yes. Everything is made for busy business owners, not developers. Each product comes with step-by-step instructions or a walkthrough video.</p></details>
+        <details><summary>Can I get a refund?</summary><p>Because digital products are delivered instantly, sales are final — but if something doesn’t work as described, contact me within 14 days and I’ll make it right.</p></details>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <div class="logo">Aga<span>’s</span> Digital Work Studio</div>
+        <p>Data, AI &amp; automation for small business · Dublin, Ireland</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/agasdigitalworkstudio" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:hello@agasdigitalworkstudio.com">Email</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+    <p class="copy">© <span id="year"></span> Aga’s Digital Work Studio. All rights reserved.</p>
+  </footer>
+
+  <!-- Checkout modal -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" data-close aria-label="Close">×</button>
+      <span class="pill" id="modalType"></span>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+      <ul class="includes" id="modalIncludes"></ul>
+      <div class="price-line" id="modalPrice"></div>
+      <div class="pay-area">
+        <a class="btn btn-stripe" id="stripeBtn" target="_blank" rel="noopener">Pay with card · Apple Pay · Google Pay</a>
+        <div class="or" id="payOr">or</div>
+        <div id="paypalButtons"></div>
+        <p class="secure">🔒 Secure checkout by Stripe &amp; PayPal</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

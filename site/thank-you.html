@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thank you! — Aga's Digital Work Studio</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="section">
+    <div class="wrap narrow" style="text-align:center">
+      <div style="font-size:3.5rem">🎉</div>
+      <span class="pill">Payment received</span>
+      <h1>Thank you!</h1>
+      <p class="lead" style="margin-inline:auto">Your order for <strong id="productName">your product</strong> is confirmed. You’ll get an email with your download / course access link within a few minutes.</p>
+      <p id="orderRef" style="color:var(--muted)"></p>
+      <p>Can’t find it? Check your spam folder, or email <a href="mailto:hello@agasdigitalworkstudio.com">hello@agasdigitalworkstudio.com</a>.</p>
+      <p style="margin-top:30px"><a class="btn" href="index.html">Back to the shop</a></p>
+    </div>
+  </main>
+  <script src="config.js"></script>
+  <script>
+    const q = new URLSearchParams(location.search);
+    const p = window.SHOP.products.find((x) => x.id === q.get("product"));
+    if (p) document.getElementById("productName").textContent = p.title;
+    if (q.get("order")) document.getElementById("orderRef").textContent = "Order reference: " + q.get("order");
+  </script>
+</body>
+</html>
