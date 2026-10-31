@@ -6,7 +6,7 @@
 
 const SHOP = require("../../site/config.js");
 
-const API = process.env.PAYPAL_ENV === "sandbox"
+const API = (process.env.PAYPAL_ENV || "").trim() === "sandbox"
   ? "https://api-m.sandbox.paypal.com"
   : "https://api-m.paypal.com";
 
@@ -23,7 +23,9 @@ function currentPrice(product) {
 }
 
 async function accessToken() {
-  const { PAYPAL_CLIENT_ID, PAYPAL_SECRET } = process.env;
+  // trim() guards against a space or line break pasted along with the keys
+  const PAYPAL_CLIENT_ID = (process.env.PAYPAL_CLIENT_ID || "").trim();
+  const PAYPAL_SECRET = (process.env.PAYPAL_SECRET || "").trim();
   if (!PAYPAL_CLIENT_ID || !PAYPAL_SECRET) throw new Error("PayPal keys are not set in Netlify");
   const auth = Buffer.from(`${PAYPAL_CLIENT_ID}:${PAYPAL_SECRET}`).toString("base64");
   const r = await fetch(`${API}/v1/oauth2/token`, {
