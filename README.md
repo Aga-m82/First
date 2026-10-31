@@ -15,10 +15,12 @@ All files are in the `site/` folder. It's a plain static website — no server n
 | `site/thank-you.html` | Page customers land on after paying |
 
 ## 1. Connect PayPal
-1. Log in at https://developer.paypal.com/dashboard/applications with your PayPal **Business** account.
-2. Switch to **Live**, click **Create App**, copy the **Client ID**.
-3. In `site/config.js` replace `paypalClientId: "sb"` with your Client ID.
-   (`"sb"` is PayPal's test mode — no real money moves.)
+1. At https://developer.paypal.com/dashboard/applications (switch to **Live**) create an app and copy the **Client ID** and **Secret**.
+2. Put the Client ID in `site/config.js` (`paypalClientId`). It is public and safe there.
+3. In Netlify → Site configuration → Environment variables, add:
+   - `PAYPAL_CLIENT_ID` = the Client ID
+   - `PAYPAL_SECRET` = the Secret (**never** put this in the website files)
+4. Redeploy. Orders are created by `netlify/functions/paypal.js`, which takes the price from `config.js`.
 
 ## 2. Connect Stripe (card, Apple Pay, Google Pay)
 For each product:
