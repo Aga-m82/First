@@ -54,3 +54,13 @@ automatically, so create both Stripe links for sale products.
 ## 6. Put it online (free)
 - **Netlify**: drag the `site` folder onto https://app.netlify.com/drop, or
 - **GitHub Pages**: repo Settings → Pages → deploy from this branch, folder `/site` (or move files to `/docs`).
+
+## 7. AI shop assistant (chat bubble)
+- `site/chat.js` shows the chat bubble; `netlify/functions/chat.js` answers using Claude.
+  Product names, prices and the sale come from `config.js`, so the assistant stays up to date.
+- Needs the Netlify environment variable `ANTHROPIC_API_KEY` (from https://console.anthropic.com).
+  Set a monthly spend limit there.
+- When a visitor wants to talk to Aga, the assistant collects their name and email and submits
+  the `chat-lead` Netlify form. Turn on Netlify Forms and add an email notification for it
+  (Project configuration → Notifications → Emails → Form submission).
+- Sale alerts come from Stripe (Settings → Communication preferences) and PayPal (on by default).

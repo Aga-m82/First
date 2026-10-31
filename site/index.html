@@ -149,7 +149,7 @@
             <h3>Want help with your business?</h3>
             <p>Book a one-to-one automation review. We’ll look at your processes and numbers together and leave with a clear, simple action plan.</p>
           </div>
-          <a class="btn" href="mailto:hello@agasdigitalworkstudio.com?subject=Automation%20review">Get in touch</a>
+          <a class="btn" href="#chat" data-open-chat>Message Aga</a>
         </div>
       </div>
     </section>
@@ -177,7 +177,7 @@
       </div>
       <div class="footer-links">
         <a href="https://www.instagram.com/agasdigitalworkstudio" target="_blank" rel="noopener">Instagram</a>
-        <a href="mailto:hello@agasdigitalworkstudio.com">Email</a>
+        <a href="#chat" data-open-chat>Contact</a>
         <a href="#faq">FAQ</a>
       </div>
     </div>
@@ -203,7 +203,33 @@
     </div>
   </div>
 
+  <!-- AI assistant chat -->
+  <button class="chat-toggle" id="chatToggle" aria-controls="chatPanel" aria-expanded="false" aria-label="Chat with Aga's assistant">💬<span>Ask me</span></button>
+  <section class="chat-panel" id="chatPanel" hidden aria-label="Chat with Aga's assistant">
+    <header class="chat-head">
+      <div><strong>Aga’s assistant</strong><span>AI helper · replies in seconds</span></div>
+      <button class="chat-close" id="chatClose" aria-label="Close chat">×</button>
+    </header>
+    <div class="chat-log" id="chatLog" aria-live="polite"></div>
+    <div class="chat-chips" id="chatChips">
+      <button type="button">Which product is right for me?</button>
+      <button type="button">How do I get my product after paying?</button>
+      <button type="button">I'd like to talk to Aga</button>
+    </div>
+    <form class="chat-form" id="chatForm">
+      <input id="chatInput" type="text" maxlength="1000" placeholder="Type your question…" autocomplete="off" aria-label="Your message">
+      <button class="btn btn-small" type="submit">Send</button>
+    </form>
+    <p class="chat-note">AI assistant — answers may not be perfect. Don’t share card details here.</p>
+  </section>
+
+  <!-- Netlify Forms: messages the assistant passes on to Aga (emailed by Netlify) -->
+  <form name="chat-lead" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input name="bot-field"><input name="name"><input name="email"><textarea name="message"></textarea><textarea name="transcript"></textarea>
+  </form>
+
   <script src="config.js"></script>
   <script src="app.js"></script>
+  <script src="chat.js"></script>
 </body>
 </html>
